@@ -45,8 +45,8 @@ FraudDetectorEngine: Orchestrates the fraud detection process.
 5. Routes and API Endpoints
 The system exposes the following API endpoints:
 
-GET <a>/api/v1/fraud/all-fraud:</a> Endpoint to check all fraud transactions.
-GET <a>/api/v1/fraud/download-csv:</a>  Endpoint to export transactions to CSV format.
+GET <a href="">/api/v1/fraud/all-fraud:</a> Endpoint to check all fraud transactions.
+GET <a href="">/api/v1/fraud/download-csv:</a>  Endpoint to export transactions to CSV format.
 
 
 6. Setup and Execution
