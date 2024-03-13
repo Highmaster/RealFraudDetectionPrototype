@@ -4,9 +4,9 @@
 
 > **⚠️ Intended only for debugging and interoperability testing purposes. ⚠️**
 
-| Github Account  | Maturity      | Status |   Latest Commit |
-|-----------------|---------------|--------|-----------------|
-| HighMaster      | Working Draft | Active |     2024-03-13  |
+| Github Account  | Status |  Submitted Date |
+|-----------------|--------|-----------------|
+| HighMaster      | Active |   2024-03-13    |
 
 
 Authors: [@Highmaster]
@@ -27,6 +27,7 @@ Processing a stream of transactions in real time.
 Identifying fraudulent patterns, such as rapid transactions across services, unusually high transaction amounts, and irregular sequences of transactions.
 Generating alerts for suspicious activities.
 Handling out-of-order events efficiently in a distributed system.
+
 ### Logic Overview
 Fraud Detector Engine
 The fraud detection logic is implemented in the FraudDetectorEngineServiceImpl class. Key components of the logic include:
@@ -34,6 +35,8 @@ The fraud detection logic is implemented in the FraudDetectorEngineServiceImpl c
 High Transaction Amount Detection: Detects transactions that are significantly higher than the user's average transaction amount in the last 24 hours.
 Multiple Service Transaction Detection: Identifies users conducting transactions in more than three distinct services within a five-minute window.
 Ping-Pong Activity Detection: Flags users engaged in ping-pong activity, where transactions bounce back and forth between two services within ten minutes.
+
+
 ### Implementation Details
 The system architecture is composed of the following components:
 
@@ -45,28 +48,6 @@ FraudDetectorEngine: Orchestrates the fraud detection process.
 ### Routes and API Endpoints
 The system exposes the following API endpoints:
 
-
-
-
-### Assumptions
-The system assumes:
-
-Transactions are received in real-time or near real-time.
-Simulated data is used for testing purposes.
-Network latencies and out-of-order events are handled efficiently within the system.
-
-[protobuf-spec]: https://developers.google.com/protocol-buffers/docs/reference/proto2-spec
-[secio-spec]: ../secio/README.md
-[tls-spec]: ../tls/tls.md
-[peer-id-spec]: ../peer-ids/peer-ids.md
-[peer-id-spec-pubkey-message]: ../peer-ids/peer-ids.md#keys
-[peer-id-spec-key-encoding]: ../peer-ids/peer-ids.md#how-keys-are-encoded-and-messages-signed
-[uvarint-spec]: https://github.com/multiformats/unsigned-varint
-[multihash]: https://github.com/multiformats/multihash
-[conn-spec-conn-upgrade]: ../connections/README.md#connection-upgrade
-[conn-spec-protocol-negotiation]: ../connections/README.md#protocol-negotiation
-[go-libp2p-peerstore]: https://github.com/libp2p/go-libp2p-peerstore
-[js-peer-book]: https://github.com/libp2p/js-peer-book
 
 
 
